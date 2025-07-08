@@ -122,7 +122,19 @@ const PrivacyPolicy = () => {
       icon: HiMiniExclamationTriangle,
     },
   ];
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 120; // Height of your fixed header plus some padding
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
 
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
   const handleBackToHome = () => {
     window.location.href = "/";
   };
@@ -218,14 +230,14 @@ const PrivacyPolicy = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
             {sections.map((section, index) => (
-              <a
+              <button
                 key={section.id}
-                href={`#${section.id}`}
-                className="flex items-center space-x-2 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 text-sm"
+                onClick={() => scrollToSection(section.id)}
+                className="flex items-center space-x-2 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 text-sm cursor-pointer"
               >
                 <section.icon className="w-4 h-4 text-purple-600" />
                 <span className="text-gray-700">{section.title}</span>
-              </a>
+              </button>
             ))}
           </div>
         </div>
