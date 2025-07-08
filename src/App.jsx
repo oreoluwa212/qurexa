@@ -404,7 +404,7 @@ const App = () => {
               className="text-2xl md:text-3xl text-white/90 mb-6 font-light animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              Care. Delivered.
+              Trust. Care. Deliver.
             </p>
             <p
               className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
@@ -741,7 +741,7 @@ const App = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold">Phone Support</h4>
-                        <p className="text-white/80">0800 123 4567</p>
+                        <p className="text-white/80">0777 673 4153</p>
                       </div>
                     </div>
 
@@ -751,7 +751,7 @@ const App = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold">Email Support</h4>
-                        <p className="text-white/80">support@qurexa.co.uk</p>
+                        <p className="text-white/80">info@qurexa.co.uk</p>
                       </div>
                     </div>
 
@@ -797,7 +797,7 @@ const App = () => {
                     <div className="text-sm text-gray-600">
                       <p className="mb-1">
                         1. Contact our support team first:{" "}
-                        <strong>complaints@qurexa.co.uk</strong>
+                        <strong>info@qurexa.co.uk</strong>
                       </p>
                       <p className="mb-1">
                         2. We will acknowledge within 24 hours and investigate
@@ -936,7 +936,7 @@ const App = () => {
                 your door.
               </p>
               <div className="text-sm text-gray-400">
-                <p>Company Registration: 12345678</p>
+                <p>Company Registration: 16242915</p>
                 <p>GPhC Partner Network Certified</p>
               </div>
             </div>
@@ -1027,11 +1027,11 @@ const App = () => {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2">
                   <FaPhone className="w-4 h-4 text-gray-400" />
-                  <span className="text-gray-300">0800 123 4567</span>
+                  <span className="text-gray-300">0777 673 4153</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaEnvelope className="w-4 h-4 text-gray-400" />
-                  <span className="text-gray-300">support@qurexa.co.uk</span>
+                  <span className="text-gray-300">info@qurexa.co.uk</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaGlobe className="w-4 h-4 text-gray-400" />
