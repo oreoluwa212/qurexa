@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HiOutlineHeart } from "react-icons/hi2";
+import { logo } from "../../assets";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,21 +22,15 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <div
-              className={`relative p-2 rounded-full transition-all duration-300 ${
-                scrollY > 50
-                  ? "bg-gradient-to-r from-blue-600 to-pink-600"
-                  : "bg-white/20 backdrop-blur-sm"
-              } group-hover:scale-110 group-hover:rotate-12`}
-            >
-              <HiOutlineHeart
-                className={`w-6 h-6 transition-all duration-300 ${
-                  scrollY > 50 ? "text-white" : "text-white"
-                } group-hover:animate-pulse`}
+          <div className="flex items-center justify-center space-x-4 group cursor-pointer">
+            <div className="relative transition-all duration-300 group-hover:scale-110">
+              <img
+                src={logo}
+                alt="Qurexa Logo"
+                className="w-12 h-12 object-contain transition-all duration-300 group-hover:animate-pulse"
               />
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
               <h1
                 className={`text-xl font-bold transition-colors duration-300 ${
                   scrollY > 50 ? "text-gray-900" : "text-white"

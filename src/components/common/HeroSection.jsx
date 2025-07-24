@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaPlay, FaStar, FaChevronDown } from "react-icons/fa";
-import { HiOutlineHeart } from "react-icons/hi2";
 import ConsentModal from "./ConsentModal";
+import { logo } from "../../assets";
 
 const HeroSection = () => {
   const [isConsentModalOpen, setIsConsentModalOpen] = useState(false);
@@ -34,10 +34,11 @@ const HeroSection = () => {
             {/* Logo Animation */}
             <div className="flex justify-center mb-8">
               <div className="relative group">
-                <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500 animate-pulse"></div>
-                <div className="relative bg-white/20 backdrop-blur-sm p-6 rounded-full border border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                  <HiOutlineHeart className="w-16 h-16 text-white animate-pulse" />
-                </div>
+                <img
+                  src={logo}
+                  alt="Qurexa Logo"
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 animate-pulse"
+                />
               </div>
             </div>
 

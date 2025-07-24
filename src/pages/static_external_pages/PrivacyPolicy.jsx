@@ -21,6 +21,7 @@ import {
   HiExclamationTriangle,
   HiMiniExclamationTriangle,
 } from "react-icons/hi2";
+import { logo } from "../../assets";
 
 const PrivacyPolicy = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -121,7 +122,7 @@ const PrivacyPolicy = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 120; // Height of your fixed header plus some padding
+      const headerOffset = 120;
       const elementPosition = element.offsetTop;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -149,23 +150,17 @@ const PrivacyPolicy = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div
-              className="flex items-center space-x-3 group cursor-pointer"
+              className="flex items-center space-x-4 group cursor-pointer"
               onClick={handleBackToHome}
             >
-              <div
-                className={`relative p-2 rounded-full transition-all duration-300 ${
-                  scrollY > 50
-                    ? "bg-gradient-to-r from-blue-600 to-pink-600"
-                    : "bg-white/20 backdrop-blur-sm"
-                } group-hover:scale-110 group-hover:rotate-12`}
-              >
-                <HiOutlineHeart
-                  className={`w-6 h-6 transition-all duration-300 ${
-                    scrollY > 50 ? "text-white" : "text-white"
-                  } group-hover:animate-pulse`}
+              <div className="relative transition-all duration-300 group-hover:scale-110">
+                <img
+                  src={logo}
+                  alt="Qurexa Logo"
+                  className="w-12 h-12 object-contain transition-all duration-300 group-hover:animate-pulse"
                 />
               </div>
-              <div>
+              <div className="flex flex-col justify-center">
                 <h1
                   className={`text-xl font-bold transition-colors duration-300 ${
                     scrollY > 50 ? "text-gray-900" : "text-white"
@@ -343,6 +338,8 @@ const PrivacyPolicy = () => {
                 "Comply with pharmacy, NHS, or regulatory requirements",
                 "Improve our services and respond to feedback or enquiries",
                 "Ensure safe delivery of healthcare items",
+                "Send newsletters and health-related updates (with your consent)",
+                "Provide educational and informative content about healthcare and medication management",
               ].map((use, index) => (
                 <div
                   key={index}

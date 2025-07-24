@@ -7,25 +7,62 @@ import {
   FaFileContract,
   FaUserShield,
 } from "react-icons/fa";
-import { HiOutlineHeart } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { logo } from "../../assets";
 
 const Footer = () => {
+  // Function to handle navigation with proper hash routing
+  const handleNavClick = (item) => {
+    const sectionId = item.toLowerCase().replace(/\s+/g, "-");
+
+    // Check if we're on the home page
+    if (window.location.pathname === "/") {
+      // If we're on home page, scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If we're on another page, navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
+
+      // Add a small delay to ensure the page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
+
+  const handleLogoClick = () => {
+    window.location.href = "/";
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-pink-600">
-                <HiOutlineHeart className="w-6 h-6 text-white" />
-              </div>
+            <button
+              onClick={handleLogoClick}
+              className="flex items-center space-x-3 group"
+            >
+              <img
+                src={logo}
+                alt="Qurexa Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
-                <h3 className="text-xl font-bold">Qurexa</h3>
-                <p className="text-gray-400 text-sm">Care. Delivered.</p>
+                <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors text-left">
+                  Qurexa
+                </h3>
+                <p className="text-gray-400 text-sm text-left">
+                  Care. Delivered.
+                </p>
               </div>
-            </div>
+            </button>
             <p className="text-gray-300 text-sm leading-relaxed">
               Safe, secure prescription delivery service working with registered
               UK pharmacies to bring your medications directly to your door.
@@ -43,12 +80,12 @@ const Footer = () => {
               {["Services", "How It Works", "Compliance", "FAQ", "Contact"].map(
                 (item) => (
                   <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase().replace(" ", "-")}`}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
+                    <button
+                      onClick={() => handleNavClick(item)}
+                      className="text-gray-300 hover:text-white transition-colors text-sm text-left hover:underline bg-transparent border-none cursor-pointer p-0"
                     >
                       {item}
-                    </a>
+                    </button>
                   </li>
                 )
               )}
@@ -60,49 +97,49 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Legal & Compliance</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  to="/privacy-policy"
-                  className="text-gray-300 hover:text-white transition-colors"
+                <a
+                  href="/privacy-policy"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Privacy Policy
-                </Link>
+                </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="/terms-of-service"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Terms of Service
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="/cookie-policy"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Cookie Policy
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="/gdpr-compliance"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   GDPR Compliance
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="/complaints-procedure"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Complaints Procedure
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="/professional-standards"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Professional Standards
                 </a>
@@ -116,11 +153,21 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <FaPhone className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-300">0800 123 4567</span>
+                <a
+                  href="tel:08001234567"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  0800 123 4567
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-300">support@qurexa.co.uk</span>
+                <a
+                  href="mailto:support@qurexa.co.uk"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  support@qurexa.co.uk
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <FaGlobe className="w-4 h-4 text-gray-400" />
