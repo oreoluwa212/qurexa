@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaPhone,
   FaEnvelope,
@@ -45,10 +46,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <button
-              onClick={handleLogoClick}
-              className="flex items-center space-x-3 group"
-            >
+            <Link to="/" className="flex items-center space-x-3 group">
               <img
                 src={logo}
                 alt="Qurexa Logo"
@@ -62,7 +60,7 @@ const Footer = () => {
                   Care. Delivered.
                 </p>
               </div>
-            </button>
+            </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Safe, secure prescription delivery service working with registered
               UK pharmacies to bring your medications directly to your door.
@@ -97,52 +95,52 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Legal & Compliance</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="/privacy-policy"
+                <Link
+                  to="/privacy-policy"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/terms-of-service"
+                <Link
+                  to="/terms-of-service"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/cookie-policy"
+                <Link
+                  to="/cookie-policy"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Cookie Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/gdpr-compliance"
+                <Link
+                  to="/gdpr-compliance"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   GDPR Compliance
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/complaints-procedure"
+                <Link
+                  to="/complaints-procedure"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Complaints Procedure
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/professional-standards"
+                <Link
+                  to="/professional-standards"
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
                   Professional Standards
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
