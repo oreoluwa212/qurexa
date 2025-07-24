@@ -76,11 +76,7 @@ const PrivacyPolicy = () => {
     },
     {
       type: "Health Information",
-      items: [
-        "Prescription Details",
-        "Health Information (delivery-related)",
-        "Medication History",
-      ],
+      items: ["Prescription Details", "Health Information (delivery-related)"],
       icon: HiShieldCheck,
     },
     {

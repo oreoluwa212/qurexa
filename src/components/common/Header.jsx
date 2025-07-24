@@ -49,7 +49,7 @@ const Header = () => {
                   scrollY > 50 ? "text-gray-600" : "text-white/80"
                 }`}
               >
-                Care. Delivered.
+                Trust. Care. Deliver.
               </p>
             </div>
           </div>

@@ -90,7 +90,10 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold">Coverage Area</h4>
-                      <p className="text-white/80">England, Wales & Scotland</p>
+                      <p className="text-white/80">
+                        Lincoln and 20km radius. For specials, please
+                        contact support.
+                      </p>
                     </div>
                   </div>
                 </div>
