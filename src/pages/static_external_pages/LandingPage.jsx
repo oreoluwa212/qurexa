@@ -39,14 +39,16 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       <Header />
       <HeroSection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <ComplianceSection />
-      <FAQSection />
-      <ContactSection />
+      <div className="space-y-8">
+        <FeaturesSection />
+        <HowItWorksSection />
+        <ComplianceSection />
+        <FAQSection />
+        <ContactSection />
+      </div>
       <Footer />
       {isConsentModalOpen && <ConsentModal />}
     </div>

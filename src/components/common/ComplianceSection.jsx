@@ -14,10 +14,10 @@ import {
 const ComplianceSection = () => {
   const complianceItems = [
     {
-      icon: HiOutlineCheckBadge,
-      title: "Patient Consent",
+      icon: FaUserMd,
+      title: "GPhC Standards",
       description:
-        "All deliveries require explicit patient consent. We provide clear consent forms and maintain records in compliance with UK regulations.",
+        "All partner pharmacies are registered with the General Pharmaceutical Council, ensuring professional standards are maintained.",
     },
     {
       icon: FaLock,
@@ -26,16 +26,16 @@ const ComplianceSection = () => {
         "Full compliance with UK GDPR and Data Protection Act 2018. Your personal and medical information is protected with enterprise-grade security.",
     },
     {
-      icon: FaUserMd,
-      title: "GPhC Standards",
+      icon: HiOutlineCheckBadge,
+      title: "Patient Consent",
       description:
-        "All partner pharmacies are registered with the General Pharmaceutical Council, ensuring professional standards are maintained.",
+        "All deliveries require explicit patient consent. We provide clear consent forms and maintain records in compliance with UK regulations.",
     },
     {
-      icon: FaShieldAlt,
-      title: "Controlled Substances",
+      icon: HiOutlineChatBubbleBottomCenterText,
+      title: "Professional Standards",
       description:
-        "Special procedures for Schedule 2 & 3 controlled drugs including ID verification and written authorization as required by law.",
+        "Qurexa complements but does not replace professional pharmacist consultation. Emergency medical advice should be sought from healthcare professionals.",
     },
     {
       icon: FaTemperatureHigh,
@@ -44,10 +44,10 @@ const ComplianceSection = () => {
         "Temperature-controlled transport, insulated containers, and proper handling procedures for all medication types.",
     },
     {
-      icon: HiOutlineChatBubbleBottomCenterText,
-      title: "Professional Standards",
+      icon: FaShieldAlt,
+      title: "Controlled Substances",
       description:
-        "Qurexa complements but does not replace professional pharmacist consultation. Emergency medical advice should be sought from healthcare professionals.",
+        "Special procedures for Schedule 2 & 3 controlled drugs including ID verification and written authorization as required by law.",
     },
   ];
 

@@ -140,11 +140,10 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header
-        className={`fixed w-full z-50 transition-all duration-500 ${
-          scrollY > 50
+        className={`fixed w-full z-50 transition-all duration-500 ${scrollY > 50
             ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
             : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -162,16 +161,14 @@ const PrivacyPolicy = () => {
               </div>
               <div className="flex flex-col justify-center">
                 <h1
-                  className={`text-xl font-bold transition-colors duration-300 ${
-                    scrollY > 50 ? "text-gray-900" : "text-white"
-                  }`}
+                  className={`text-xl font-bold transition-colors duration-300 ${scrollY > 50 ? "text-gray-900" : "text-white"
+                    }`}
                 >
                   Qurexa
                 </h1>
                 <p
-                  className={`text-sm transition-colors duration-300 ${
-                    scrollY > 50 ? "text-gray-600" : "text-white/80"
-                  }`}
+                  className={`text-sm transition-colors duration-300 ${scrollY > 50 ? "text-gray-600" : "text-white/80"
+                    }`}
                 >
                   Trust. Care. Deliver.
                 </p>
@@ -181,11 +178,10 @@ const PrivacyPolicy = () => {
             {/* Back to Home Button */}
             <button
               onClick={handleBackToHome}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${
-                scrollY > 50
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${scrollY > 50
                   ? "text-gray-700 hover:bg-gray-100"
                   : "text-white hover:bg-white/20"
-              }`}
+                }`}
             >
               <HiArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
@@ -614,28 +610,7 @@ const PrivacyPolicy = () => {
         </section>
       </div>
       <ContactSection />
-      {/* Footer */}
       <Footer />
-      {/* <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4">
-            <div className="flex justify-center items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <FaUserShield className="w-5 h-5 text-blue-400" />
-                <span className="text-sm">GDPR Compliant</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <FaShieldAlt className="w-5 h-5 text-green-400" />
-                <span className="text-sm">GPhC Partner</span>
-              </div>
-            </div>
-            <p className="text-gray-400 text-sm">
-              &copy; 2025 Qurexa Ltd. All rights reserved. | Company
-              Registration: 16242915
-            </p>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 };
