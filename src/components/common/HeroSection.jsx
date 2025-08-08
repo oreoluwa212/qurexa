@@ -122,14 +122,14 @@ const HeroSection = () => {
                 />
 
                 {/* Coverage Area Badge - Positioned over the image */}
-                <div className="absolute bottom-8 left-6 bg-white/50 backdrop-blur-sm text-gray-800 px-6 py-4 rounded-2xl shadow-xl border border-white/20">
+                <div className="absolute bottom-2 left-6 border-[#CB2B7DB2]/50 bg-white/50 backdrop-blur-sm text-gray-800 p-5 rounded-2xl shadow-xl border">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                      <FaMapMarkerAlt className="w-5 h-5 text-white" />
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                      <FaMapMarkerAlt className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-sm">
-                      <div className="font-bold text-gray-800">Coverage Area</div>
-                      <div className="text-gray-600 font-medium">Lincolnshire + 20km radius</div>
+                    <div className="text-md">
+                      <div className="font-bold text-lg text-black">Coverage Area</div>
+                      <div className="text-black">Lincolnshire + 20km radius</div>
                     </div>
                   </div>
                 </div>
