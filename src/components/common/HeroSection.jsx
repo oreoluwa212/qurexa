@@ -6,10 +6,10 @@ const HeroSection = () => {
   const [isConsentModalOpen, setIsConsentModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100">
+      {/* Background Image Layer */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
         {/* Optional overlay for better text readability */}

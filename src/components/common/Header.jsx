@@ -54,18 +54,18 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Qurexa Logo"
-                className="w-10 h-10 object-contain transition-all duration-300"
+                className="w-14 h-14 object-contain transition-all duration-300"
               />
             </div>
             <div className="flex flex-col">
               <h1
-                className={`text-lg font-bold transition-colors duration-300 ${scrollY > 50 || isMenuOpen ? "text-gray-900" : "text-gray-800"
+                className={`text-2xl font-bold transition-colors duration-300 ${scrollY > 50 || isMenuOpen ? "text-gray-900" : "text-gray-800"
                   }`}
               >
                 Qurexa
               </h1>
               <p
-                className={`text-xs transition-colors duration-300 ${scrollY > 50 || isMenuOpen ? "text-gray-600" : "text-gray-700"
+                className={`text-md transition-colors duration-300 ${scrollY > 50 || isMenuOpen ? "text-gray-600" : "text-gray-700"
                   }`}
               >
                 Trust. Care. Deliver.
@@ -74,13 +74,13 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             {["Home", "Prescriptions", "Groceries", "Partner With Us", "Blog"].map(
               (item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 relative group ${scrollY > 50 || isMenuOpen
+                  className={`text-md font-medium transition-all duration-300 hover:scale-105 relative group ${scrollY > 50 || isMenuOpen
                       ? "text-gray-700 hover:text-pink-600"
                       : item === "Home" ? "text-pink-600" : "text-gray-600 hover:text-gray-800"
                     }`}
@@ -97,9 +97,9 @@ const Header = () => {
           {/* Sign In Button */}
           <div className="hidden md:flex items-center">
             <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${scrollY > 50 || isMenuOpen
-                  ? "bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-lg"
-                  : "bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-lg"
+              className={`px-7 py-3 rounded-full text-md font-medium transition-all duration-300 hover:scale-105 ${scrollY > 50 || isMenuOpen
+                  ? "bg-gradient-to-r from-pink-500/60 to-[#CB2B7DB2]/60 text-white shadow-lg"
+                  : "bg-gradient-to-r from-pink-500/60 to-[#CB2B7DB2]/60 text-white shadow-lg"
                 }`}
             >
               Sign In
