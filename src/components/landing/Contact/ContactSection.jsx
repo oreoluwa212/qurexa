@@ -40,7 +40,6 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
               <div className="absolute inset-0 bg-black/20"></div>
@@ -100,7 +99,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Complaints Procedure */}
             <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500">
               <div className="flex items-start space-x-3">
                 <FaQuestionCircle className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
@@ -131,7 +129,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div
             className="animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}

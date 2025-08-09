@@ -11,7 +11,7 @@ const FeaturesSection = () => {
       description: "Fast, secure prescription delivery and medication returns",
       features: [
         "NHS compliant",
-        "Same-day delivery", 
+        "Same-day delivery",
         "Secure handling"
       ],
       buttonText: "Request Delivery",
@@ -21,7 +21,7 @@ const FeaturesSection = () => {
     },
     {
       icon: FaTruck,
-      title: "Grocery Delivery", 
+      title: "Grocery Delivery",
       description: "Fresh groceries and essentials delivered to your door",
       features: [
         "Local stores",
@@ -39,7 +39,7 @@ const FeaturesSection = () => {
       description: "Join our network of riders, vendors, and pharmacy partners",
       features: [
         "Flexible hours",
-        "Competitive rates", 
+        "Competitive rates",
         "Full support"
       ],
       buttonText: "Become a Partner",
@@ -52,7 +52,6 @@ const FeaturesSection = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our Services
@@ -62,7 +61,6 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
@@ -72,40 +70,33 @@ const FeaturesSection = () => {
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden animate-fade-in-up border border-gray-100"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Background Gradient Overlay */}
-              <div 
+              <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl"
                 style={{
                   background: `linear-gradient(135deg, ${service.gradientFrom}20, ${service.gradientTo}20)`
                 }}
               ></div>
 
-              {/* Content */}
               <div className="relative z-10">
-                {/* Icon */}
                 <div className="mb-6 flex justify-center">
-                  <div className={`${service.iconBg} rounded-full p-4 transform transition-all duration-500 ${
-                    hoveredService === index ? "scale-110 rotate-6" : ""
-                  } shadow-lg`}>
+                  <div className={`${service.iconBg} rounded-full p-4 transform transition-all duration-500 ${hoveredService === index ? "scale-110 rotate-6" : ""
+                    } shadow-lg`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
 
-                {/* Title */}
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-gray-800 transition-colors">
                   {service.title}
                 </h3>
 
-                {/* Description */}
                 <p className="text-gray-600 leading-relaxed text-center mb-6 group-hover:text-gray-700 transition-colors">
                   {service.description}
                 </p>
 
-                {/* Features List */}
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600 group-hover:text-gray-700 transition-colors">
-                      <div 
+                      <div
                         className="w-2 h-2 rounded-full mr-3 flex-shrink-0"
                         style={{
                           background: `linear-gradient(135deg, ${service.gradientFrom}, ${service.gradientTo})`
@@ -116,8 +107,7 @@ const FeaturesSection = () => {
                   ))}
                 </ul>
 
-                {/* CTA Button */}
-                <button 
+                <button
                   className="w-full py-4 px-6 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-200"
                   style={{
                     background: `linear-gradient(135deg, ${service.gradientFrom}, ${service.gradientTo})`
@@ -127,8 +117,7 @@ const FeaturesSection = () => {
                 </button>
               </div>
 
-              {/* Hover Border Effect */}
-              <div 
+              <div
                 className="absolute inset-0 border-2 border-transparent group-hover:border-opacity-30 rounded-3xl transition-all duration-500"
                 style={{
                   borderColor: hoveredService === index ? service.gradientTo : 'transparent'
@@ -138,25 +127,6 @@ const FeaturesSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Custom CSS for animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-      `}</style>
     </section>
   );
 };

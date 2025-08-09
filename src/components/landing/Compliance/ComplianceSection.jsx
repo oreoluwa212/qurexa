@@ -90,7 +90,6 @@ const ComplianceSection = () => {
           ))}
         </div>
 
-        {/* Legal Disclaimers */}
         <div className="mt-16 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg animate-fade-in-up">
           <div className="flex items-start">
             <FaExclamationTriangle className="w-6 h-6 text-yellow-600 mr-3 mt-1 flex-shrink-0" />

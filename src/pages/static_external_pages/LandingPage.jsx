@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/common/Header";
-import HeroSection from "../../components/common/HeroSection";
-import FeaturesSection from "../../components/common/FeaturesSection";
-import HowItWorksSection from "../../components/common/HowItWorksSection";
-import ConsentModal from "../../components/common/ConsentModal";
-import ComplianceSection from "../../components/common/ComplianceSection";
-import FAQSection from "../../components/common/FAQSection";
-import ContactSection from "../../components/common/ContactSection";
-import Footer from "../../components/common/Footer";
+import HeroSection from "../../components/landing/Hero/HeroSection";
+import FeaturesSection from "../../components/landing/Features/FeaturesSection";
+import HowItWorksSection from "../../components/landing/HowItWorks/HowItWorksSection";
+import ConsentModal from "../../components/landing/Modals/ConsentModal";
+import ComplianceSection from "../../components/landing/Compliance/ComplianceSection";
+import FAQSection from "../../components/landing/FAQ/FAQSection";
+import ContactSection from "../../components/landing/Contact/ContactSection";
+import LandingLayout from "../../components/layout/LandingLayout";
 
 const LandingPage = () => {
   const [isConsentModalOpen, setIsConsentModalOpen] = useState(false);
@@ -26,7 +25,6 @@ const LandingPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Auto-cycle through steps
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % 3);
@@ -39,8 +37,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="bg-white">
-      <Header />
+    <LandingLayout>
       <HeroSection />
       <div className="space-y-8">
         <FeaturesSection />
@@ -49,9 +46,8 @@ const LandingPage = () => {
         <FAQSection />
         <ContactSection />
       </div>
-      <Footer />
       {isConsentModalOpen && <ConsentModal />}
-    </div>
+    </LandingLayout>
   );
 };
 

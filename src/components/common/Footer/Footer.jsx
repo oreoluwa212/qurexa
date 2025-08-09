@@ -12,7 +12,7 @@ import {
   FaTwitter,
   FaPlus,
 } from "react-icons/fa";
-import { logo } from "../../assets";
+import { logo } from "../../../assets";
 
 const Footer = () => {
   const handleNavClick = (item) => {

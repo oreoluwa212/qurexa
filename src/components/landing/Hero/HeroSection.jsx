@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import { FaStar, FaMapMarkerAlt, FaShieldAlt } from "react-icons/fa";
-import { logo, heroBackground, deliveryHeroImg } from "../../assets";
+import { logo, heroBackground, deliveryHeroImg } from "../../../assets";
 
 const HeroSection = () => {
   const [isConsentModalOpen, setIsConsentModalOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100">
-      {/* Background Image Layer */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        {/* Optional overlay for better text readability */}
         <div className="absolute inset-0 bg-white/10"></div>
       </div>
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(6)].map((_, i) => (
           <div
@@ -35,10 +32,8 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-20 items-center">
-          {/* Left Side - Content */}
           <div className="text-left space-y-3 lg:pr-8">
-            {/* Logo and Brand */}
-            <div className="md:flex hidden items-center space-x-4 mb-8">
+            <div className="md:flex hidden items-center space-x-4 my-8">
               <div className="relative group">
                 <img
                   src={logo}
@@ -56,7 +51,6 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Main Description */}
             <div className="space-y-4 pt-6">
               <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
                 Safe, secure prescription delivery service working with registered
@@ -65,7 +59,6 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 py-4">
               <button
                 onClick={() => setIsConsentModalOpen(true)}
@@ -79,9 +72,7 @@ const HeroSection = () => {
               </button>
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row gap-5">
-              {/* NHS Compliant */}
               <div className="flex items-center text-gray-700">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <FaShieldAlt className="w-4 h-4 text-green-600" />
@@ -89,7 +80,6 @@ const HeroSection = () => {
                 <span className="text-base">NHS Compliant</span>
               </div>
 
-              {/* Coverage Area */}
               <div className="flex items-center text-gray-700">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center">
                   <FaMapMarkerAlt className="w-4 h-4 text-purple-600" />
@@ -98,7 +88,6 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Rating */}
             <div className="flex items-center gap-3 text-gray-700">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -109,11 +98,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Side - Image Area */}
           <div className="relative lg:pl-8">
-            {/* Main Image Container */}
             <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0">
-              {/* Main Image Container */}
               <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0">
                 <img
                   src={deliveryHeroImg}
@@ -121,7 +107,6 @@ const HeroSection = () => {
                   className="w-full h-[600px] object-cover rounded-2xl"
                 />
 
-                {/* Coverage Area Badge - Positioned over the image */}
                 <div className="absolute bottom-2 left-6 border-[#CB2B7DB2]/50 bg-white/50 backdrop-blur-sm text-gray-800 p-5 rounded-2xl shadow-xl border">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">

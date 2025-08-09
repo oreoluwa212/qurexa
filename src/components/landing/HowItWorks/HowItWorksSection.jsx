@@ -26,7 +26,6 @@ const HowItWorksSection = () => {
     },
   ];
 
-  // Auto-cycle through steps
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % 3);
@@ -47,7 +46,6 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connection Lines */}
           <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 -translate-y-1/2"></div>
 
           {steps.map((step, index) => (
@@ -56,7 +54,6 @@ const HowItWorksSection = () => {
               className="relative text-center group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Step Number */}
               <div
                 className={`relative inline-flex items-center justify-center w-20 h-20 rounded-full text-2xl font-bold text-white mb-6 transition-all duration-300 ${
                   activeStep === index
@@ -67,7 +64,6 @@ const HowItWorksSection = () => {
                 <span className="relative z-10">{index + 1}</span>
               </div>
 
-              {/* Icon */}
               <div className="mb-4">
                 <step.icon
                   className={`w-12 h-12 mx-auto transition-all duration-300 ${
@@ -78,7 +74,6 @@ const HowItWorksSection = () => {
                 />
               </div>
 
-              {/* Content */}
               <h3
                 className={`text-xl font-bold mb-4 transition-colors duration-300 ${
                   activeStep === index
@@ -95,7 +90,6 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        {/* Progress Indicators */}
         <div className="flex justify-center mt-12 space-x-2">
           {steps.map((_, index) => (
             <button

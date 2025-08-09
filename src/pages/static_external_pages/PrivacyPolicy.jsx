@@ -15,8 +15,8 @@ import {
   HiArrowLeft,
 } from "react-icons/hi";
 import { FaFileContract, FaUserShield, FaShieldAlt } from "react-icons/fa";
-import Footer from "../../components/common/Footer";
-import ContactSection from "../../components/common/ContactSection";
+import Footer from "../../components/common/Footer/Footer";
+import ContactSection from "../../components/landing/Contact/ContactSection";
 import {
   HiExclamationTriangle,
   HiMiniExclamationTriangle,
@@ -138,7 +138,6 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header
         className={`fixed w-full z-50 transition-all duration-500 ${scrollY > 50
             ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
@@ -147,7 +146,6 @@ const PrivacyPolicy = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Logo */}
             <div
               className="flex items-center space-x-4 group cursor-pointer"
               onClick={handleBackToHome}
@@ -175,7 +173,6 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            {/* Back to Home Button */}
             <button
               onClick={handleBackToHome}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${scrollY > 50
@@ -190,7 +187,6 @@ const PrivacyPolicy = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
@@ -212,7 +208,6 @@ const PrivacyPolicy = () => {
         </div>
       </section>
 
-      {/* Quick Navigation */}
       <section className="py-8 bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
@@ -230,9 +225,7 @@ const PrivacyPolicy = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Who We Are */}
         <section id="who-we-are" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg text-white">
@@ -279,7 +272,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* What Information We Collect */}
         <section id="information-we-collect" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg text-white">
@@ -314,7 +306,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* How We Use Your Data */}
         <section id="how-we-use" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg text-white">
@@ -356,7 +347,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* Legal Basis */}
         <section id="legal-basis" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-red-500 to-purple-600 rounded-lg text-white">
@@ -405,7 +395,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* Data Sharing */}
         <section id="data-sharing" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg text-white">
@@ -448,7 +437,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* Data Retention */}
         <section id="data-retention" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg text-white">
@@ -480,7 +468,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* Your Rights */}
         <section id="your-rights" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg text-white">
@@ -530,7 +517,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* How We Protect Your Data */}
         <section id="data-protection" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg text-white">
@@ -583,7 +569,6 @@ const PrivacyPolicy = () => {
           </div>
         </section>
 
-        {/* Updates to Policy */}
         <section id="updates" className="mb-16">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg text-white">
