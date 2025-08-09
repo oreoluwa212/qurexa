@@ -165,8 +165,8 @@ const BlogPage = () => {
                             </Button>
                         </div>
                     ) : (
-                        <div className="space-y-6">
-                            <div className="block">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div className="lg:col-span-1">
                                 <BlogCard
                                     key={filteredPosts[0]?.id}
                                     {...filteredPosts[0]}
@@ -176,14 +176,14 @@ const BlogPage = () => {
                                 />
                             </div>
 
-                            <div className="space-y-6 sm:space-y-4">
-                                {filteredPosts.slice(1).map((post) => (
+                            <div className="lg:col-span-1 space-y-4">
+                                {filteredPosts.slice(1, 4).map((post) => (
                                     <BlogCard
                                         key={post.id}
                                         {...post}
                                         showBadge={post.showBadge}
                                         badgePosition="overlay"
-                                        variant="horizontal"
+                                        variant="compact"
                                         className="w-full"
                                     />
                                 ))}
