@@ -19,7 +19,7 @@ export const Button = ({
     ...props
 }) => {
     const baseStyles = `
-    inline-flex items-center justify-center font-medium rounded-lg
+    inline-flex items-center justify-center font-medium
     transition-all duration-200 ease-in-out
     focus:outline-none focus:ring-2 focus:ring-offset-2
     disabled:opacity-50 disabled:cursor-not-allowed
@@ -40,7 +40,7 @@ export const Button = ({
       focus:ring-pink-500
     `,
         secondary2: `
-      bg-white text-[#4873ED] border-2 
+      bg-white rounded-full text-[#4873ED] border-2 
       hover:bg-pink-50 hover:border-pink-600
       focus:ring-pink-500
     `,

@@ -29,7 +29,7 @@ export const Newsletter = ({
 
     if (isSubscribed) {
         return (
-            <section className={`bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
+            <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-14 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
                 <div className="max-w-md mx-auto">
                     <div className="mb-4">
                         <svg className="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,9 +51,9 @@ export const Newsletter = ({
     }
 
     return (
-        <section className={`bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
+        <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-14 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
             <div className="max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+                <h3 className="text-2xl font-bold text-white pb-1">{title}</h3>
                 <p className="text-blue-100 mb-6">{description}</p>
 
                 <div className="flex justify-center">
@@ -72,7 +72,7 @@ export const Newsletter = ({
                                 type="submit"
                                 variant="secondary2"
                                 size="md"
-                                className="shrink-0 px-8 z-100"
+                                className="shrink-0 px-8 z-100 rounded-full"
                                 disabled={isSubmitting || !email}
                                 loading={isSubmitting}
                                 onClick={handleSubmit}
