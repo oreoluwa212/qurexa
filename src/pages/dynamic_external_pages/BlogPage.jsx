@@ -166,6 +166,7 @@ const BlogPage = () => {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            {/* Featured post - left side */}
                             <div className="lg:col-span-1">
                                 <BlogCard
                                     key={filteredPosts[0]?.id}
@@ -176,6 +177,7 @@ const BlogPage = () => {
                                 />
                             </div>
 
+                            {/* Remaining posts - right side */}
                             <div className="lg:col-span-1 space-y-4">
                                 {filteredPosts.slice(1, 4).map((post) => (
                                     <BlogCard
