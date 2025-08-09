@@ -165,32 +165,61 @@ const BlogPage = () => {
                             </Button>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {/* Featured post - left side */}
-                            <div className="lg:col-span-1">
-                                <BlogCard
-                                    key={filteredPosts[0]?.id}
-                                    {...filteredPosts[0]}
-                                    showBadge={filteredPosts[0]?.showBadge}
-                                    badgePosition="overlay"
-                                    variant="featured"
-                                />
-                            </div>
-
-                            {/* Remaining posts - right side */}
-                            <div className="lg:col-span-1 space-y-4">
-                                {filteredPosts.slice(1, 4).map((post) => (
+                        <>
+                            {/* Mobile Layout - Single column grid */}
+                            <div className="grid grid-cols-1 gap-6 md:hidden">
+                                {filteredPosts.slice(0, 4).map((post, index) => (
                                     <BlogCard
                                         key={post.id}
                                         {...post}
                                         showBadge={post.showBadge}
                                         badgePosition="overlay"
-                                        variant="compact"
-                                        className="w-full"
+                                        variant={index === 0 ? "featured" : "default"}
                                     />
                                 ))}
                             </div>
-                        </div>
+
+                            {/* Tablet Layout - Two column grid with consistent cards */}
+                            <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
+                                {filteredPosts.slice(0, 4).map((post) => (
+                                    <BlogCard
+                                        key={post.id}
+                                        {...post}
+                                        showBadge={post.showBadge}
+                                        badgePosition="overlay"
+                                        variant="default"
+                                    />
+                                ))}
+                            </div>
+
+                            {/* Desktop Layout - Two column with featured + compact cards */}
+                            <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+                                {/* Featured post - left side */}
+                                <div className="lg:col-span-1">
+                                    <BlogCard
+                                        key={filteredPosts[0]?.id}
+                                        {...filteredPosts[0]}
+                                        showBadge={filteredPosts[0]?.showBadge}
+                                        badgePosition="overlay"
+                                        variant="featured"
+                                    />
+                                </div>
+
+                                {/* Remaining posts - right side */}
+                                <div className="lg:col-span-1 space-y-4">
+                                    {filteredPosts.slice(1, 4).map((post) => (
+                                        <BlogCard
+                                            key={post.id}
+                                            {...post}
+                                            showBadge={post.showBadge}
+                                            badgePosition="overlay"
+                                            variant="compact"
+                                            className="w-full"
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </>
                     )}
                 </section>
 

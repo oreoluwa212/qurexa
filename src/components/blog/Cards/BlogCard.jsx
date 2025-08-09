@@ -72,8 +72,8 @@ export const BlogCard = ({
         ),
 
         compact: () => (
-            <article className={`${baseClasses} flex ${className} h-40`}>
-                <div className="relative w-60 h-full overflow-hidden flex-shrink-0">
+            <article className={`${baseClasses} flex ${className} min-h-[200px]`}>
+                <div className="relative w-60 flex-shrink-0 overflow-hidden">
                     <img
                         src={image}
                         alt={title}
@@ -86,7 +86,7 @@ export const BlogCard = ({
                     )}
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
-                    <div>
+                    <div className="flex-1">
                         {showBadge && badgePosition === "content" && (
                             <div className="mb-2">
                                 <CategoryBadge category={category} size="sm" />
@@ -95,9 +95,9 @@ export const BlogCard = ({
                         <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 hover:text-pink-600 transition-colors cursor-pointer leading-tight">
                             {title}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-3 line-clamp-2 leading-relaxed">{excerpt}</p>
+                        <p className="text-gray-600 text-sm mb-3 line-clamp-3 leading-relaxed flex-1">{excerpt}</p>
                     </div>
-                    <div className="flex flex-col space-y-2 text-sm text-gray-500">
+                    <div className="flex flex-col space-y-2 text-sm text-gray-500 mt-auto">
                         <div className="flex items-center justify-between w-full">
                             <span className="font-medium text-gray-700">{author}</span>
                             <span>{date}</span>
@@ -174,7 +174,7 @@ export const BlogCard = ({
         ),
 
         default: () => (
-            <article className={`${baseClasses} ${className}`}>
+            <article className={`${baseClasses} ${className} h-full`}>
                 <div className="relative h-48 overflow-hidden">
                     <img
                         src={image}
@@ -187,7 +187,7 @@ export const BlogCard = ({
                         </div>
                     )}
                 </div>
-                <div className="p-5">
+                <div className="p-5 flex flex-col h-[calc(100%-12rem)]">
                     {showBadge && badgePosition === "content" && (
                         <div className="mb-3">
                             <CategoryBadge category={category} size="sm" />
@@ -196,8 +196,8 @@ export const BlogCard = ({
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-pink-600 transition-colors cursor-pointer leading-tight">
                         {title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed min-h-[4.5rem]">{excerpt}</p>
-                    <div className="flex flex-col space-y-2 text-sm text-gray-500">
+                    <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed flex-1">{excerpt}</p>
+                    <div className="flex flex-col space-y-2 text-sm text-gray-500 mt-auto">
                         <div className="flex items-center justify-between w-full">
                             <span className="font-medium text-gray-700">{author}</span>
                             <span>{date}</span>
