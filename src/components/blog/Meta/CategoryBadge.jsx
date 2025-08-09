@@ -5,7 +5,7 @@ export const CategoryBadge = ({ category, size = "md", className = "" }) => {
         "NHS Updates": "bg-[#3B82F6]/60 text-white",
         "Home Care": "bg-blue-500 text-white",
         "Food Culture": "bg-orange-500 text-white",
-        "Medication": "bg-pink-500 text-white"
+        "Medication": "bg-[#3B82F6]/70 text-white"
     };
 
     const sizeClasses = {

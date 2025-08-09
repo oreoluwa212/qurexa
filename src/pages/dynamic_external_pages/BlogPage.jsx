@@ -56,7 +56,7 @@ const BlogPage = () => {
         {
             id: 4,
             image: "https://plus.unsplash.com/premium_photo-1691784080844-8300ab4c6790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fE5ldyUyME5IUyUyMERpZ2l0YWwlMjBQcmVzY3JpcHRpb24lMjBJbml0aWF0aXZlfGVufDB8fDB8fHww",
-            category: "NHS Updates",
+            category: "Medication",
             title: "New NHS Digital Prescription Initiative",
             excerpt: "Learn about the latest NHS digital prescription program and how it's streamlining medication delivery across the UK.",
             author: "NHS Communications",
@@ -249,7 +249,7 @@ const BlogPage = () => {
 
                         <BlogCard
                             image="https://images.unsplash.com/photo-1583088580067-16d1109aeacb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fE5IUyUyMFByZXNjcmlwdGlvbiUyMERlbGl2ZXJ5JTNBJTIwV2hhdCUyMFlvdSUyME5lZWQlMjB0byUyMEtub3d8ZW58MHx8MHx8fDA%3D"
-                            category="NHS Updates"
+                            category="Medication"
                             title="NHS Prescription Delivery: What You Need to Know"
                             excerpt="Complete guide to NHS prescription delivery services, eligibility, and how to access them safely."
                             author="NHS Pharmacist Team"
