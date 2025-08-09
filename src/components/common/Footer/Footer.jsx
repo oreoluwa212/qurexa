@@ -45,8 +45,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3 group mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Q</span>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src={logo}
+                  alt="Qurexa Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors text-left">

@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-20 items-center">
-          <div className="text-left space-y-3 lg:pr-8">
+          <div className="text-left space-y-2 lg:pr-8">
             <div className="md:flex hidden items-center space-x-4 my-8">
               <div className="relative group">
                 <img
@@ -51,7 +51,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="space-y-4 pt-6">
+            <div className="space-y-4">
               <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
                 Safe, secure prescription delivery service working with registered
                 UK pharmacies. Your medications delivered with care, compliance,
