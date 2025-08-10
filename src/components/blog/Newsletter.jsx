@@ -29,7 +29,7 @@ export const Newsletter = ({
 
     if (isSubscribed) {
         return (
-            <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-14 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
+            <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-16 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
                 <div className="max-w-md mx-auto">
                     <div className="mb-4">
                         <svg className="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,34 +51,40 @@ export const Newsletter = ({
     }
 
     return (
-        <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-14 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
+        <section className={`bg-gradient-to-br from-blue-600 via-purple-600 py-16 to-pink-600 rounded-2xl p-8 text-center ${className}`}>
             <div className="max-w-4xl mx-auto">
                 <h3 className="text-2xl font-bold text-white pb-1">{title}</h3>
                 <p className="text-blue-100 mb-6">{description}</p>
 
                 <div className="flex justify-center">
-                    <div className="w-full">
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full">
-                            <Input
-                                type="email"
-                                value={email}
-                                onChange={setEmail}
-                                placeholder={placeholder}
-                                required
-                                variant="outlined"
-                                disabled={isSubmitting}
-                            />
-                            <Button
-                                type="submit"
-                                variant="secondary2"
-                                size="md"
-                                className="shrink-0 px-8 z-100 rounded-full"
-                                disabled={isSubmitting || !email}
-                                loading={isSubmitting}
-                                onClick={handleSubmit}
-                            >
-                                {buttonText}
-                            </Button>
+                    <div className="w-full sm:w-3/5 max-w-2xl">
+                        <div className="flex flex-col sm:flex-row gap-3 items-stretch w-full">
+                            <div className="flex-1 sm:min-w-0">
+                                <Input
+                                    type="email"
+                                    value={email}
+                                    onChange={setEmail}
+                                    placeholder={placeholder}
+                                    required
+                                    variant="outlined"
+                                    disabled={isSubmitting}
+                                    className="!w-full text-white placeholder-white/70"
+                                    fullWidth={true}
+                                />
+                            </div>
+                            <div className="sm:flex-shrink-0">
+                                <Button
+                                    type="submit"
+                                    variant="secondary2"
+                                    size="md"
+                                    className="w-full sm:w-auto sm:px-6 z-100 rounded-full"
+                                    disabled={isSubmitting || !email}
+                                    loading={isSubmitting}
+                                    onClick={handleSubmit}
+                                >
+                                    {buttonText}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
