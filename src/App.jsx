@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/static_external_pages/PrivacyPolicy";
 import BlogPage from "./pages/dynamic_external_pages/BlogPage";
 import DefaultLayout from "./components/layout/DefaultLayout";
 import PrescriptionPage from "./pages/static_external_pages/PrescriptionPage";
+import GroceryPage from "./pages/static_external_pages/GroceryPage";
 
 const App = () => {
   return (
@@ -26,17 +27,16 @@ const App = () => {
               </DefaultLayout>
             }
           />
+          
           <Route
             path="/groceries"
             element={
               <DefaultLayout>
-                <div className="pt-20 px-4 text-center">
-                  <h1 className="text-3xl font-bold text-gray-900 mb-4">Groceries Page - Coming Soon</h1>
-                  <p className="text-gray-600">Fresh groceries delivered to your doorstep.</p>
-                </div>
+                <GroceryPage />
               </DefaultLayout>
             }
           />
+          
           <Route
             path="/partner"
             element={
@@ -48,6 +48,7 @@ const App = () => {
               </DefaultLayout>
             }
           />
+          
           <Route
             path="/privacy-policy"
             element={
