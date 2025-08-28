@@ -155,7 +155,7 @@ const GroceryPage = () => {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center mb-4">
-                        <div className="p-3 rounded-full mr-4" style={{ backgroundColor: '#4D47D4B2' }}>
+                        <div className="p-3 rounded-full mr-4" style={{ backgroundColor: '#4873EDB2' }}>
                             <HiOutlineShoppingCart className="w-8 h-8 text-white" />
                         </div>
                         <h1 className="text-4xl font-bold text-gray-900">Grocery Delivery</h1>
@@ -164,13 +164,13 @@ const GroceryPage = () => {
                         Fast, secure grocery delivery and medication return services
                     </p>
                     <div className="flex justify-center space-x-4 mt-6">
-                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4D47D4B2' }}>
+                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4873EDB2' }}>
                             Same-day delivery
                         </span>
-                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4D47D4B2' }}>
+                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4873EDB2' }}>
                             Fresh products
                         </span>
-                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4D47D4B2' }}>
+                        <span className="text-white px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#4873EDB2' }}>
                             Secure service
                         </span>
                     </div>
@@ -185,7 +185,7 @@ const GroceryPage = () => {
                                     ? 'text-white'
                                     : 'bg-white text-gray-600 hover:bg-gray-50'
                                 }`}
-                            style={activeTab === 'pickup' ? { background: 'linear-gradient(to right, #4D47D4, #4D47D4B2)' } : {}}
+                            style={activeTab === 'pickup' ? { background: 'linear-gradient(to right, #4873ED, #4873EDB2)' } : {}}
                         >
                             <HiOutlineShoppingCart className="w-5 h-5 inline-block mr-2" />
                             Grocery Pickup & Delivery Service
@@ -196,7 +196,7 @@ const GroceryPage = () => {
                                     ? 'text-white'
                                     : 'bg-white text-gray-600 hover:bg-gray-50'
                                 }`}
-                            style={activeTab === 'delivery' ? { background: 'linear-gradient(to right, #4D47D4, #4D47D4B2)' } : {}}
+                            style={activeTab === 'delivery' ? { background: 'linear-gradient(to right, #4873ED, #4873EDB2)' } : {}}
                         >
                             <HiOutlineLocationMarker className="w-5 h-5 inline-block mr-2" />
                             Full Delivery Service
@@ -211,7 +211,7 @@ const GroceryPage = () => {
                         {/* Customer Information */}
                         <div className="mb-10">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <HiOutlineUser className="w-6 h-6 mr-3" style={{ color: '#4D47D4' }} />
+                                <HiOutlineUser className="w-6 h-6 mr-3" style={{ color: '#4873ED' }} />
                                 Customer Information
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,8 +226,8 @@ const GroceryPage = () => {
                                         onChange={(e) => handleInputChange('customerInfo', 'fullName', e.target.value)}
                                         className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['customerInfo.fullName'] ? 'border-red-500' : 'border-gray-300'
                                             }`}
-                                        style={{ '--tw-ring-color': '#4D47D4' }}
-                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                        style={{ '--tw-ring-color': '#4873ED' }}
+                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                         onBlur={(e) => e.target.style.boxShadow = ''}
                                     />
                                     {errors['customerInfo.fullName'] && (
@@ -247,8 +247,8 @@ const GroceryPage = () => {
                                             onChange={(e) => handleInputChange('customerInfo', 'phoneNumber', e.target.value)}
                                             className={`w-full pl-10 pr-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['customerInfo.phoneNumber'] ? 'border-red-500' : 'border-gray-300'
                                                 }`}
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         />
                                     </div>
@@ -262,13 +262,13 @@ const GroceryPage = () => {
                         {/* Store Information */}
                         <div className="mb-10">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <HiOutlineLocationMarker className="w-6 h-6 mr-3" style={{ color: '#4D47D4' }} />
+                                <HiOutlineLocationMarker className="w-6 h-6 mr-3" style={{ color: '#4873ED' }} />
                                 Store Information
                             </h3>
 
                             {/* Popular Stores Quick Select */}
                             <div className="mb-6">
-                                <label className="block text-sm font-medium text-gray-700 mb-3">Popular Stores</label>
+                                <label className="block text-sm font-medium mb-3">Popular Stores</label>
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                     {popularStores.map((store, index) => (
                                         <button
@@ -279,11 +279,11 @@ const GroceryPage = () => {
                                                 handleInputChange('storeInfo', 'storeLocation', store.location);
                                             }}
                                             className="p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-all text-sm"
-                                            style={{ '--hover-bg': '#4D47D4B2' }}
+                                            style={{ '--hover-bg': '#4873EDB2' }}
                                             onMouseEnter={(e) => {
-                                                e.target.style.backgroundColor = '#4D47D4B2';
+                                                e.target.style.backgroundColor = '#4873EDB2';
                                                 e.target.style.color = 'white';
-                                                e.target.style.borderColor = '#4D47D4';
+                                                e.target.style.borderColor = '#4873ED';
                                             }}
                                             onMouseLeave={(e) => {
                                                 e.target.style.backgroundColor = '';
@@ -310,8 +310,8 @@ const GroceryPage = () => {
                                         onChange={(e) => handleInputChange('storeInfo', 'storeName', e.target.value)}
                                         className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['storeInfo.storeName'] ? 'border-red-500' : 'border-gray-300'
                                             }`}
-                                        style={{ '--tw-ring-color': '#4D47D4' }}
-                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                        style={{ '--tw-ring-color': '#4873ED' }}
+                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                         onBlur={(e) => e.target.style.boxShadow = ''}
                                     />
                                     {errors['storeInfo.storeName'] && (
@@ -329,8 +329,8 @@ const GroceryPage = () => {
                                         onChange={(e) => handleInputChange('storeInfo', 'storeLocation', e.target.value)}
                                         className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['storeInfo.storeLocation'] ? 'border-red-500' : 'border-gray-300'
                                             }`}
-                                        style={{ '--tw-ring-color': '#4D47D4' }}
-                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                        style={{ '--tw-ring-color': '#4873ED' }}
+                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                         onBlur={(e) => e.target.style.boxShadow = ''}
                                     />
                                     {errors['storeInfo.storeLocation'] && (
@@ -352,8 +352,8 @@ const GroceryPage = () => {
                                         onChange={(e) => handleInputChange('storeInfo', 'shoppingList', e.target.value)}
                                         rows={6}
                                         className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:border-blue-500 resize-none"
-                                        style={{ '--tw-ring-color': '#4D47D4' }}
-                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                        style={{ '--tw-ring-color': '#4873ED' }}
+                                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                         onBlur={(e) => e.target.style.boxShadow = ''}
                                     />
                                 </div>
@@ -363,13 +363,13 @@ const GroceryPage = () => {
                         {/* Upload Shopping List */}
                         <div className="mb-10">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <HiOutlineCamera className="w-6 h-6 mr-3" style={{ color: '#4D47D4' }} />
+                                <HiOutlineCamera className="w-6 h-6 mr-3" style={{ color: '#4873ED' }} />
                                 Upload photo of your shopping list
                             </h3>
 
                             <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center transition-colors"
-                                style={{ '--hover-border': '#4D47D4' }}
-                                onMouseEnter={(e) => e.target.style.borderColor = '#4D47D4'}
+                                style={{ '--hover-border': '#4873ED' }}
+                                onMouseEnter={(e) => e.target.style.borderColor = '#4873ED'}
                                 onMouseLeave={(e) => e.target.style.borderColor = '#D1D5DB'}>
                                 <input
                                     type="file"
@@ -423,7 +423,7 @@ const GroceryPage = () => {
                         {activeTab === 'delivery' && (
                             <div className="mb-10">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                    <HiOutlineHome className="w-6 h-6 mr-3" style={{ color: '#4D47D4' }} />
+                                    <HiOutlineHome className="w-6 h-6 mr-3" style={{ color: '#4873ED' }} />
                                     Delivery Address
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -438,8 +438,8 @@ const GroceryPage = () => {
                                             onChange={(e) => handleInputChange('deliveryAddress', 'streetAddress', e.target.value)}
                                             className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['deliveryAddress.streetAddress'] ? 'border-red-500' : 'border-gray-300'
                                                 }`}
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         />
                                         {errors['deliveryAddress.streetAddress'] && (
@@ -457,8 +457,8 @@ const GroceryPage = () => {
                                             onChange={(e) => handleInputChange('deliveryAddress', 'city', e.target.value)}
                                             className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['deliveryAddress.city'] ? 'border-red-500' : 'border-gray-300'
                                                 }`}
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         />
                                         {errors['deliveryAddress.city'] && (
@@ -476,8 +476,8 @@ const GroceryPage = () => {
                                             onChange={(e) => handleInputChange('deliveryAddress', 'postcode', e.target.value)}
                                             className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['deliveryAddress.postcode'] ? 'border-red-500' : 'border-gray-300'
                                                 }`}
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         />
                                         {errors['deliveryAddress.postcode'] && (
@@ -492,8 +492,8 @@ const GroceryPage = () => {
                                             value={formData.deliveryAddress.deliveryTime}
                                             onChange={(e) => handleInputChange('deliveryAddress', 'deliveryTime', e.target.value)}
                                             className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:border-blue-500"
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         >
                                             {deliveryTimeSlots.map((slot, index) => (
@@ -513,8 +513,8 @@ const GroceryPage = () => {
                                             onChange={(e) => handleInputChange('deliveryAddress', 'specialInstructions', e.target.value)}
                                             rows={3}
                                             className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:border-blue-500 resize-none"
-                                            style={{ '--tw-ring-color': '#4D47D4' }}
-                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4D47D4B2'}
+                                            style={{ '--tw-ring-color': '#4873ED' }}
+                                            onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
                                             onBlur={(e) => e.target.style.boxShadow = ''}
                                         />
                                     </div>
@@ -528,7 +528,7 @@ const GroceryPage = () => {
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
                                 className="w-full text-white px-12 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                                style={{ backgroundColor: '#4D47D4' }}
+                                style={{ backgroundColor: '#4873ED' }}
                             >
                                 {isSubmitting ? (
                                     <div className="flex items-center">
