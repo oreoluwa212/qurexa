@@ -1,3 +1,4 @@
+// Updated App.js
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -9,8 +10,10 @@ import LandingPage from "./pages/static_external_pages/LandingPage";
 import PrivacyPolicy from "./pages/static_external_pages/PrivacyPolicy";
 import BlogPage from "./pages/dynamic_external_pages/BlogPage";
 import DefaultLayout from "./components/layout/DefaultLayout";
+import PartnerLayout from "./components/layout/PartnerLayout";
 import PrescriptionPage from "./pages/static_external_pages/PrescriptionPage";
 import GroceryPage from "./pages/static_external_pages/GroceryPage";
+import PartnerWithUsPage from "./pages/static_external_pages/PartnerWithUsPage";
 
 const App = () => {
   return (
@@ -27,7 +30,7 @@ const App = () => {
               </DefaultLayout>
             }
           />
-          
+
           <Route
             path="/groceries"
             element={
@@ -36,19 +39,16 @@ const App = () => {
               </DefaultLayout>
             }
           />
-          
+
           <Route
             path="/partner"
             element={
-              <DefaultLayout>
-                <div className="pt-20 px-4 text-center">
-                  <h1 className="text-3xl font-bold text-gray-900 mb-4">Partner With Us Page - Coming Soon</h1>
-                  <p className="text-gray-600">Join our network of trusted delivery partners.</p>
-                </div>
-              </DefaultLayout>
+              <PartnerLayout>
+                <PartnerWithUsPage />
+              </PartnerLayout>
             }
           />
-          
+
           <Route
             path="/privacy-policy"
             element={
