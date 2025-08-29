@@ -1,6 +1,9 @@
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { useState } from 'react';
 
 const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
+    const [selectedStore, setSelectedStore] = useState(null);
+
     const popularStores = [
         { name: 'Tesco Express', location: 'High Street, London' },
         { name: 'Sainsbury\'s Local', location: 'Main Road, Manchester' },
@@ -9,6 +12,12 @@ const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
         { name: 'Waitrose & Partners', location: 'Town Centre, Bath' },
         { name: 'Co-op Food', location: 'Village Green, Oxford' }
     ];
+
+    const handleStoreSelect = (store, index) => {
+        setSelectedStore(index);
+        handleInputChange('storeInfo', 'storeName', store.name);
+        handleInputChange('storeInfo', 'storeLocation', store.location);
+    };
 
     return (
         <div className="mb-8 sm:mb-10">
@@ -25,25 +34,17 @@ const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
                         <button
                             key={index}
                             type="button"
-                            onClick={() => {
-                                handleInputChange('storeInfo', 'storeName', store.name);
-                                handleInputChange('storeInfo', 'storeLocation', store.location);
-                            }}
-                            className="p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-all text-sm"
-                            style={{ '--hover-bg': '#4873EDB2' }}
-                            onMouseEnter={(e) => {
-                                e.target.style.backgroundColor = '#4873EDB2';
-                                e.target.style.color = 'white';
-                                e.target.style.borderColor = '#4873ED';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.target.style.backgroundColor = '';
-                                e.target.style.color = '';
-                                e.target.style.borderColor = '#D1D5DB';
-                            }}
+                            onClick={() => handleStoreSelect(store, index)}
+                            className={`p-3 text-left border rounded-lg transition-all text-sm ${selectedStore === index
+                                    ? 'text-white border-blue-500'
+                                    : 'border-gray-200 text-gray-900 hover:border-gray-300'
+                                }`}
+                            style={selectedStore === index ? { backgroundColor: '#4873EDB2' } : {}}
                         >
-                            <div className="font-semibold text-gray-900">{store.name}</div>
-                            <div className="text-gray-600 text-xs">{store.location}</div>
+                            <div className="font-semibold">{store.name}</div>
+                            <div className={`text-xs ${selectedStore === index ? 'text-white' : 'text-gray-600'}`}>
+                                {store.location}
+                            </div>
                         </button>
                     ))}
                 </div>
@@ -59,11 +60,8 @@ const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
                         placeholder="Enter store name"
                         value={formData.storeInfo.storeName}
                         onChange={(e) => handleInputChange('storeInfo', 'storeName', e.target.value)}
-                        className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['storeInfo.storeName'] ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${errors['storeInfo.storeName'] ? 'border-red-500' : 'border-gray-300'
                             }`}
-                        style={{ '--tw-ring-color': '#4873ED' }}
-                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
-                        onBlur={(e) => e.target.style.boxShadow = ''}
                     />
                     {errors['storeInfo.storeName'] && (
                         <p className="text-red-500 text-sm mt-1">{errors['storeInfo.storeName']}</p>
@@ -78,11 +76,8 @@ const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
                         placeholder="Enter store location"
                         value={formData.storeInfo.storeLocation}
                         onChange={(e) => handleInputChange('storeInfo', 'storeLocation', e.target.value)}
-                        className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:border-blue-500 ${errors['storeInfo.storeLocation'] ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${errors['storeInfo.storeLocation'] ? 'border-red-500' : 'border-gray-300'
                             }`}
-                        style={{ '--tw-ring-color': '#4873ED' }}
-                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
-                        onBlur={(e) => e.target.style.boxShadow = ''}
                     />
                     {errors['storeInfo.storeLocation'] && (
                         <p className="text-red-500 text-sm mt-1">{errors['storeInfo.storeLocation']}</p>
@@ -102,10 +97,7 @@ const StoreInfoSection = ({ formData, handleInputChange, errors }) => {
                         value={formData.storeInfo.shoppingList}
                         onChange={(e) => handleInputChange('storeInfo', 'shoppingList', e.target.value)}
                         rows={6}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:border-blue-500 resize-none"
-                        style={{ '--tw-ring-color': '#4873ED' }}
-                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #4873EDB2'}
-                        onBlur={(e) => e.target.style.boxShadow = ''}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                     />
                 </div>
             </div>
