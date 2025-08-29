@@ -18,6 +18,10 @@ import podiatristIcon from '../assets/icons/podiatrist.svg';
 import sexualHealthIcon from '../assets/icons/sexual-health.svg';
 import careHomeIcon from '../assets/icons/care-home.svg';
 import hospitalIcon from '../assets/icons/hospital.svg';
+import webPortalIcon from '../assets/icons/web-portal.svg';
+import csvUploadIcon from '../assets/icons/csv-upload.svg';
+import apiAccessIcon from '../assets/icons/api-access.svg';
+import scheduledPickupsIcon from '../assets/icons/scheduled-pickups.svg';
 
 export {
     logo,
@@ -38,5 +42,9 @@ export {
     podiatristIcon,
     sexualHealthIcon,
     careHomeIcon,
-    hospitalIcon
+    hospitalIcon,
+    webPortalIcon,
+    csvUploadIcon,
+    apiAccessIcon,
+    scheduledPickupsIcon
 };

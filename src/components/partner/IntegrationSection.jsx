@@ -1,9 +1,19 @@
-const IntegrationCard = ({ icon, title, description, bgColor }) => (
-    <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-        <div className={`w-20 h-20 ${bgColor} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>
-            <div className="text-white text-3xl">{icon}</div>
+import {
+    webPortalIcon,
+    csvUploadIcon,
+    apiAccessIcon,
+    scheduledPickupsIcon
+} from '../../assets';
+
+const IntegrationCard = ({ icon, title, description }) => (
+    <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100 flex flex-col justify-between min-h-[262px]">
+        <div className="flex flex-col items-center flex-grow">
+            <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4"
+                style={{ background: 'linear-gradient(135deg, #3B82F6 0%, #9333EA 100%)' }}>
+                <img src={icon} alt={title} className="w-8 h-8 filter brightness-0 invert" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{title}</h3>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{title}</h3>
         <p className="text-gray-600 text-center leading-relaxed">{description}</p>
     </div>
 );
@@ -11,28 +21,24 @@ const IntegrationCard = ({ icon, title, description, bgColor }) => (
 const IntegrationSection = () => {
     const integrations = [
         {
-            icon: "🌐",
+            icon: webPortalIcon,
             title: "Web Portal",
-            description: "Schedule, track, and confirm deliveries with no tech setup",
-            bgColor: "bg-gradient-to-r from-blue-500 to-cyan-600"
+            description: "Schedule, track, and confirm deliveries with no tech setup"
         },
         {
-            icon: "📄",
+            icon: csvUploadIcon,
             title: "CSV Upload",
-            description: "Send bulk requests via spreadsheet (perfect for care homes)",
-            bgColor: "bg-gradient-to-r from-green-500 to-teal-600"
+            description: "Send bulk requests via spreadsheet (perfect for care homes)"
         },
         {
-            icon: "🔌",
+            icon: apiAccessIcon,
             title: "API Access",
-            description: "Automate delivery booking directly from your system",
-            bgColor: "bg-gradient-to-r from-purple-500 to-indigo-600"
+            description: "Automate delivery booking directly from your system"
         },
         {
-            icon: "📅",
+            icon: scheduledPickupsIcon,
             title: "Scheduled Pickups",
-            description: "Set daily/weekly logistics flow with our team",
-            bgColor: "bg-gradient-to-r from-orange-500 to-red-600"
+            description: "Set daily/weekly logistics flow with our team"
         }
     ];
 
@@ -52,7 +58,6 @@ const IntegrationSection = () => {
                             icon={integration.icon}
                             title={integration.title}
                             description={integration.description}
-                            bgColor={integration.bgColor}
                         />
                     ))}
                 </div>
