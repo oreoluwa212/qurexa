@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiOutlineCalendar } from 'react-icons/hi';
 
 const ReturnSection = ({ returnSchedule, errors, onChange }) => {

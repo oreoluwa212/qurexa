@@ -1,5 +1,3 @@
-import React from 'react';
-
 const IntegrationCard = ({ icon, title, description, bgColor }) => (
     <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
         <div className={`w-20 h-20 ${bgColor} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>

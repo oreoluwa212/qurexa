@@ -28,10 +28,10 @@ const PartnerHeader = () => {
     };
 
     return (
-        <header className="fixed w-full z-50 bg-transparent backdrop-blur-sm border-b border-white/10">
+        <header className="fixed w-full z-50 bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100">
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 bg-gradient-to-r from-pink-500/95 to-purple-600/95 backdrop-blur-lg lg:hidden"
+                    className="fixed inset-0 bg-white/95 backdrop-blur-lg md:hidden"
                     onClick={() => setIsMenuOpen(false)}
                 />
             )}
@@ -40,27 +40,27 @@ const PartnerHeader = () => {
                 <div className="flex justify-between items-center py-3">
                     <Link
                         to="/"
-                        className="flex items-center space-x-2 md:space-x-3 group"
+                        className="flex items-center space-x-3 group"
                         onClick={handleLinkClick}
                     >
                         <div className="relative transition-all duration-300 group-hover:scale-110">
                             <img
                                 src={logo}
                                 alt="Qurexa Logo"
-                                className="w-10 h-10 md:w-14 md:h-14 object-contain transition-all duration-300"
+                                className="w-14 h-14 object-contain transition-all duration-300"
                             />
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="text-lg md:text-2xl font-bold text-white transition-colors duration-300">
+                            <h1 className="text-2xl font-bold text-gray-900 transition-colors duration-300">
                                 Qurexa
                             </h1>
-                            <p className="text-xs md:text-md text-white/80 transition-colors duration-300">
+                            <p className="text-md text-gray-600 transition-colors duration-300">
                                 Trust. Care. Deliver.
                             </p>
                         </div>
                     </Link>
 
-                    <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <nav className="hidden md:flex items-center space-x-8">
                         {[
                             { name: "Home", path: "/" },
                             { name: "Prescriptions", path: "/prescriptions" },
@@ -76,28 +76,28 @@ const PartnerHeader = () => {
                                     to={item.path}
                                     onClick={handleLinkClick}
                                     className={`text-md font-medium transition-all duration-300 hover:scale-105 relative group ${isActive
-                                        ? "text-white"
-                                        : "text-white/80 hover:text-white"
+                                        ? "text-pink-600"
+                                        : "text-gray-700 hover:text-pink-600"
                                         }`}
                                 >
                                     {item.name}
                                     {isActive && (
-                                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white"></span>
+                                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-pink-600"></span>
                                     )}
                                 </Link>
                             );
                         })}
                     </nav>
 
-                    <div className="hidden lg:flex items-center">
-                        <button className="px-5 md:px-7 py-2 md:py-3 rounded-full text-sm md:text-md font-medium transition-all duration-300 hover:scale-105 bg-white/20 backdrop-blur-sm text-white shadow-lg border border-white/30 hover:bg-white/30">
+                    <div className="hidden md:flex items-center">
+                        <button className="px-7 py-3 rounded-full text-md font-medium transition-all duration-300 hover:scale-105 bg-gradient-to-r from-pink-500/60 to-[#CB2B7DB2]/60 text-white shadow-lg">
                             Sign In
                         </button>
                     </div>
 
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="lg:hidden p-2 rounded-lg transition-all duration-300 hover:scale-110 text-white hover:bg-white/10"
+                        className="md:hidden p-2 rounded-lg transition-all duration-300 hover:scale-110 text-gray-700 hover:bg-gray-100"
                     >
                         <div className="space-y-1">
                             <div
@@ -117,7 +117,7 @@ const PartnerHeader = () => {
                 </div>
 
                 <div
-                    className={`lg:hidden transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-screen pb-6" : "max-h-0"
+                    className={`md:hidden transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-screen pb-6" : "max-h-0"
                         }`}
                 >
                     <nav className="flex flex-col space-y-4 pt-4 min-h-screen">
@@ -132,22 +132,22 @@ const PartnerHeader = () => {
                                 key={item.name}
                                 to={item.path}
                                 onClick={handleLinkClick}
-                                className="py-4 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-white hover:bg-white/10 text-lg font-medium text-left"
+                                className="py-4 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-gray-700 hover:bg-gray-100 text-lg font-medium text-left"
                             >
                                 {item.name}
                             </Link>
                         ))}
 
                         <div className="flex flex-col space-y-4 pt-6">
-                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 bg-white text-pink-600 hover:bg-white/90">
+                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
                                 Request Delivery
                             </button>
 
-                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 bg-white text-purple-600 hover:bg-white/90">
+                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 bg-gradient-to-r from-pink-500 to-pink-600 text-white">
                                 Return Medicine
                             </button>
 
-                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 border-2 border-white/30 text-white bg-transparent hover:bg-white/10">
+                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 border-2 border-gray-300 text-gray-700 bg-white">
                                 Sign In
                             </button>
                         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiOutlineClipboardList, HiOutlinePhone } from 'react-icons/hi';
 
 const PharmacySection = ({ pharmacy, errors, onChange }) => {

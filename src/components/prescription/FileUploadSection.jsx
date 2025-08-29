@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiOutlineUpload } from 'react-icons/hi';
 
 const FileUploadSection = ({ files, onFileUpload, onRemoveFile }) => {

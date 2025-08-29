@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { HiOutlineShieldCheck, HiOutlineClock } from 'react-icons/hi';
+import { useState } from 'react';
 import { PrimaryButton, SecondaryButton } from '../../components/common/UI/Button';
 import ConsentModal from '../../components/landing/Modals/ConsentModal';
 import PrescriptionHeader from '../../components/prescription/PrescriptionHeader';
-import ServiceTabs from '../../components/prescription/ServiceTabs';
+import PrescriptionServiceTabs from '../../components/prescription/ServiceTabs';
 import PatientInfoSection from '../../components/prescription/PatientInfoSection';
 import DeliverySection from '../../components/prescription/DeliverySection';
 import ReturnSection from '../../components/prescription/ReturnSection';
@@ -151,7 +150,6 @@ const PrescriptionsPage = () => {
         setTimeout(() => {
             alert(`${activeTab === 'delivery' ? 'Prescription delivery' : 'Medication return'} request submitted successfully!`);
             setIsSubmitting(false);
-            // Reset form logic would go here
         }, 2000);
     };
 
@@ -167,7 +165,8 @@ const PrescriptionsPage = () => {
                 <PrescriptionHeader />
 
                 <div className="bg-white rounded-2xl shadow-lg mb-8 overflow-hidden">
-                    <ServiceTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+                    {/* Fixed: Pass activeTab and setActiveTab props */}
+                    <PrescriptionServiceTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
                     <div className="p-8">
                         <p className="text-gray-600 mb-8 text-center">

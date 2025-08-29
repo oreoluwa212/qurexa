@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
-  HiOutlineHeart,
   HiShieldCheck,
   HiUserGroup,
   HiDatabase,
@@ -25,7 +24,6 @@ import { logo } from "../../assets";
 
 const PrivacyPolicy = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -140,8 +138,8 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-white">
       <header
         className={`fixed w-full z-50 transition-all duration-500 ${scrollY > 50
-            ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
-            : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"
+          ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
+          : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,8 +174,8 @@ const PrivacyPolicy = () => {
             <button
               onClick={handleBackToHome}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${scrollY > 50
-                  ? "text-gray-700 hover:bg-gray-100"
-                  : "text-white hover:bg-white/20"
+                ? "text-gray-700 hover:bg-gray-100"
+                : "text-white hover:bg-white/20"
                 }`}
             >
               <HiArrowLeft className="w-5 h-5" />

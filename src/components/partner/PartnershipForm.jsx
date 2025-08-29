@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const PartnershipForm = () => {
     const [formData, setFormData] = useState({
@@ -20,7 +20,6 @@ const PartnershipForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission here
         console.log('Form submitted:', formData);
     };
 
@@ -60,7 +59,6 @@ const PartnershipForm = () => {
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Business/Clinic/Rider Name */}
                                     <div>
                                         <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-2">
                                             Business / Clinic / Rider Name <span className="text-red-500">*</span>
@@ -77,7 +75,6 @@ const PartnershipForm = () => {
                                         />
                                     </div>
 
-                                    {/* Email */}
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                                             Email <span className="text-red-500">*</span>
@@ -96,7 +93,6 @@ const PartnershipForm = () => {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Phone Number */}
                                     <div>
                                         <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
                                             Phone Number <span className="text-red-500">*</span>
@@ -113,7 +109,6 @@ const PartnershipForm = () => {
                                         />
                                     </div>
 
-                                    {/* Partner Type */}
                                     <div>
                                         <label htmlFor="partnerType" className="block text-sm font-medium text-gray-700 mb-2">
                                             Partner Type <span className="text-red-500">*</span>
@@ -137,7 +132,6 @@ const PartnershipForm = () => {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Approximate Monthly Volume */}
                                     <div>
                                         <label htmlFor="monthlyVolume" className="block text-sm font-medium text-gray-700 mb-2">
                                             Approximate Monthly Volume <span className="text-red-500">*</span>
@@ -154,7 +148,6 @@ const PartnershipForm = () => {
                                         />
                                     </div>
 
-                                    {/* Preferred Integration Method */}
                                     <div>
                                         <label htmlFor="integrationMethod" className="block text-sm font-medium text-gray-700 mb-2">
                                             Preferred Integration Method <span className="text-red-500">*</span>
@@ -177,7 +170,6 @@ const PartnershipForm = () => {
                                     </div>
                                 </div>
 
-                                {/* Submit Button */}
                                 <div className="pt-6">
                                     <button
                                         type="submit"

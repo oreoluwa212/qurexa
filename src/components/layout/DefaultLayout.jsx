@@ -1,4 +1,3 @@
-import React from "react";
 import DefaultHeader from "../common/Header/DefaultHeader";
 import Footer from "../common/Footer/Footer";
 

@@ -1,5 +1,5 @@
 // src/components/common/UI/SearchBar.jsx
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { HiSearch, HiX, HiFilter } from 'react-icons/hi';
 
 export const SearchBar = ({

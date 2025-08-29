@@ -1,10 +1,8 @@
-import React from 'react';
 import { HiOutlineHome, HiOutlineClock } from 'react-icons/hi';
 
 const DeliverySection = ({ deliveryAddress, deliveryTime, errors, onChange }) => {
     return (
         <>
-            {/* Delivery Address Section */}
             <div className="mb-10">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                     <HiOutlineHome className="w-6 h-6 mr-3 text-pink-600" />
@@ -86,7 +84,6 @@ const DeliverySection = ({ deliveryAddress, deliveryTime, errors, onChange }) =>
                 </div>
             </div>
 
-            {/* Prescription Requirements */}
             <div className="mb-10">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                     <HiOutlineClock className="w-6 h-6 mr-3 text-pink-600" />
@@ -137,7 +134,6 @@ const DeliverySection = ({ deliveryAddress, deliveryTime, errors, onChange }) =>
                 </div>
             </div>
 
-            {/* Delivery Options */}
             <div className="mb-10">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                     <HiOutlineClock className="w-6 h-6 mr-3 text-pink-600" />

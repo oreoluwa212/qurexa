@@ -34,32 +34,42 @@ const PartnersSection = () => {
         { icon: hospitalIcon, label: "Hospitals" }
     ];
 
-    const duplicatedPartners = [...partners, ...partners];
+    const duplicatedPartners = [...partners, ...partners, ...partners];
 
     return (
-        <section className="py-16 bg-white overflow-hidden">
-            <div className="px-4 w-full">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        We partner with a wide range of professionals and organisations:
-                    </h2>
-                </div>
-
-                <div className="relative">
-                    <div className="flex overflow-hidden">
-                        <div className="flex animate-scroll">
-                            {duplicatedPartners.map((partner, index) => (
-                                <PartnerIcon
-                                    key={index}
-                                    icon={partner.icon}
-                                    label={partner.label}
-                                />
-                            ))}
+        <>
+            <section className="py-16 bg-white overflow-hidden">
+                <div className="px-4 w-full">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            We partner with a wide range of professionals and organisations:
+                        </h2>
+                    </div>
+                    <div className="relative">
+                        <div className="flex overflow-hidden">
+                            <div className="flex animate-scroll-seamless">
+                                {duplicatedPartners.map((partner, index) => (
+                                    <PartnerIcon
+                                        key={`first-${index}`}
+                                        icon={partner.icon}
+                                        label={partner.label}
+                                    />
+                                ))}
+                            </div>
+                            <div className="flex animate-scroll-seamless">
+                                {duplicatedPartners.map((partner, index) => (
+                                    <PartnerIcon
+                                        key={`second-${index}`}
+                                        icon={partner.icon}
+                                        label={partner.label}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

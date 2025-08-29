@@ -1,5 +1,3 @@
-// Updated App.js
-import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,8 +12,11 @@ import PartnerLayout from "./components/layout/PartnerLayout";
 import PrescriptionPage from "./pages/static_external_pages/PrescriptionPage";
 import GroceryPage from "./pages/static_external_pages/GroceryPage";
 import PartnerWithUsPage from "./pages/static_external_pages/PartnerWithUsPage";
+import useScrollProgress from "./hooks/useScrollProgress";
 
 const App = () => {
+  useScrollProgress();
+
   return (
     <Router>
       <div className="min-h-screen bg-white">

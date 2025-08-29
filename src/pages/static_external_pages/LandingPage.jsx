@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeroSection from "../../components/landing/Hero/HeroSection";
 import FeaturesSection from "../../components/landing/Features/FeaturesSection";
 import HowItWorksSection from "../../components/landing/HowItWorks/HowItWorksSection";

@@ -1,31 +1,29 @@
-import React from 'react';
 import { HiOutlineLocationMarker, HiOutlineRefresh } from 'react-icons/hi';
+import ServiceTabs from '../common/UI/ServiceTabs';
 
-const ServiceTabs = ({ activeTab, setActiveTab }) => {
+const PrescriptionServiceTabs = ({ activeTab, setActiveTab }) => {
+    const prescriptionTabs = [
+        {
+            id: 'delivery',
+            label: 'Prescription Delivery',
+            icon: HiOutlineLocationMarker
+        },
+        {
+            id: 'returns',
+            label: 'Medication Returns',
+            icon: HiOutlineRefresh
+        }
+    ];
+
     return (
-        <div className="flex border-b">
-            <button
-                onClick={() => setActiveTab('delivery')}
-                className={`flex-1 px-6 py-4 text-center font-semibold transition-all ${activeTab === 'delivery'
-                        ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-50'
-                    }`}
-            >
-                <HiOutlineLocationMarker className="w-5 h-5 inline-block mr-2" />
-                Prescription Delivery
-            </button>
-            <button
-                onClick={() => setActiveTab('returns')}
-                className={`flex-1 px-6 py-4 text-center font-semibold transition-all ${activeTab === 'returns'
-                        ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-50'
-                    }`}
-            >
-                <HiOutlineRefresh className="w-5 h-5 inline-block mr-2" />
-                Medication Returns
-            </button>
-        </div>
+        <ServiceTabs
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            tabs={prescriptionTabs}
+            gradientColors="rgb(236, 72, 153), rgb(219, 39, 119)" // pink-500 to pink-600
+            showDescription={false}
+        />
     );
 };
 
-export default ServiceTabs;
+export default PrescriptionServiceTabs;

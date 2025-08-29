@@ -1,4 +1,3 @@
-import React from "react";
 import PartnerHeader from "../common/Header/PartnerHeader";
 import Footer from "../common/Footer/Footer";
 
