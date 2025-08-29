@@ -11,6 +11,13 @@ import referralIcon from '../assets/icons/referral-discounts.svg';
 import ridersIcon from '../assets/icons/trained-riders.svg';
 import dashboardIcon from '../assets/icons/dashboards.svg';
 import medicationIcon from '../assets/icons/medication-return.svg';
+import pharmacyIcon from '../assets/icons/pharmacy.svg';
+import gpIcon from '../assets/icons/gp-practice.svg';
+import dentistIcon from '../assets/icons/dentist.svg';
+import podiatristIcon from '../assets/icons/podiatrist.svg';
+import sexualHealthIcon from '../assets/icons/sexual-health.svg';
+import careHomeIcon from '../assets/icons/care-home.svg';
+import hospitalIcon from '../assets/icons/hospital.svg';
 
 export {
     logo,
@@ -24,5 +31,12 @@ export {
     referralIcon,
     ridersIcon,
     dashboardIcon,
-    medicationIcon
+    medicationIcon,
+    pharmacyIcon,
+    gpIcon,
+    dentistIcon,
+    podiatristIcon,
+    sexualHealthIcon,
+    careHomeIcon,
+    hospitalIcon
 };

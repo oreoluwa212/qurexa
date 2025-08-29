@@ -1,41 +1,62 @@
-import React from 'react';
+import {
+    pharmacyIcon,
+    gpIcon,
+    dentistIcon,
+    podiatristIcon,
+    sexualHealthIcon,
+    careHomeIcon,
+    hospitalIcon
+} from '../../assets';
 
 const PartnerIcon = ({ icon, label }) => (
-    <div className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-lg transition-all duration-300 transform hover:scale-105 group">
-        <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-        <span className="text-gray-700 font-medium text-center text-sm">{label}</span>
+    <div className="flex items-center gap-3 whitespace-nowrap px-6">
+        <div className="w-8 h-8 flex-shrink-0">
+            <img
+                src={icon}
+                alt={label}
+                className="w-full h-full object-contain"
+            />
+        </div>
+        <span className="text-gray-700 font-medium text-base">
+            {label}
+        </span>
     </div>
 );
 
 const PartnersSection = () => {
     const partners = [
-        { icon: "💊", label: "Pharmacies" },
-        { icon: "🏥", label: "GP Practices" },
-        { icon: "🦷", label: "Dentists" },
-        { icon: "🦶", label: "Podiatrists" },
-        { icon: "🩺", label: "Sexual Health Clinics" },
-        { icon: "🏠", label: "Care Homes" },
-        { icon: "🏥", label: "Hospitals" }
+        { icon: pharmacyIcon, label: "Pharmacies" },
+        { icon: gpIcon, label: "GP Practices" },
+        { icon: dentistIcon, label: "Dentists" },
+        { icon: podiatristIcon, label: "Podiatrists" },
+        { icon: sexualHealthIcon, label: "Sexual Health Clinics" },
+        { icon: careHomeIcon, label: "Care Homes" },
+        { icon: hospitalIcon, label: "Hospitals" }
     ];
 
+    const duplicatedPartners = [...partners, ...partners];
+
     return (
-        <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
+        <section className="py-16 bg-white overflow-hidden">
+            <div className="px-4 w-full">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 max-w-4xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         We partner with a wide range of professionals and organisations:
                     </h2>
                 </div>
 
-                <div className="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
-                    {partners.map((partner, index) => (
-                        <div key={index} className="flex-shrink-0">
-                            <PartnerIcon
-                                icon={partner.icon}
-                                label={partner.label}
-                            />
+                <div className="relative">
+                    <div className="flex overflow-hidden">
+                        <div className="flex animate-scroll">
+                            {duplicatedPartners.map((partner, index) => (
+                                <PartnerIcon
+                                    key={index}
+                                    icon={partner.icon}
+                                    label={partner.label}
+                                />
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </section>
