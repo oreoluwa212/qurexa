@@ -128,7 +128,7 @@ const GroceryPage = () => {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <GroceryHeroSection />
 
-                <div className="bg-white rounded-2xl shadow-lg mb-8 overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-lg pb-10 mb-8 overflow-hidden">
                     <ServiceTypeTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
                     <div className="px-8">
