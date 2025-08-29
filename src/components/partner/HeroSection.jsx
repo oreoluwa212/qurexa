@@ -3,52 +3,47 @@ import { partnerHeroImg } from '../../assets';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 overflow-hidden pt-20">
-            {/* Background overlay */}
-            <div className="absolute inset-0 bg-black/30"></div>
+        <section
+            className="relative min-h-screen overflow-hidden"
+            style={{
+                backgroundImage: `url(${partnerHeroImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+            {/* Background overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/20"></div>
 
-            {/* Background decorative elements */}
-            <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-32 right-20 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 left-16 w-80 h-80 bg-pink-300/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-purple-300/25 rounded-full blur-3xl animate-pulse delay-500"></div>
-            </div>
-
-            <div className="relative z-10 container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-                    {/* Left Content */}
-                    <div className="text-white space-y-8">
-                        <div className="space-y-6">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            {/* Main content container */}
+            <div className="relative z-10 px-4 md:px-8 h-screen flex items-center justify-center">
+                <div className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] max-w-none">
+                    {/* Text content with blurred background - much larger container */}
+                    <div
+                        className="p-8 md:p-16 lg:p-20 xl:p-24 rounded-2xl md:rounded-3xl text-white w-full min-h-[60vh] md:min-h-[70vh] flex flex-col justify-center"
+                        style={{
+                            backdropFilter: 'blur(25px)',
+                            background: 'linear-gradient(90deg, rgba(72, 115, 237, 0.12) 0%, rgba(77, 71, 212, 0.12) 50%, rgba(203, 43, 125, 0.12) 100%)'
+                        }}
+                    >
+                        <div className="space-y-4 md:space-y-6 lg:space-y-8 text-center">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight px-2">
                                 Partner With Qurexa
                             </h1>
-                            <p className="text-lg md:text-xl leading-relaxed text-white/90 max-w-lg">
+                            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white/90 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4">
                                 Connecting Healthcare & Communities Through Trusted Delivery—
                                 let's simplify delivery together.
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-6 md:mt-8 lg:mt-10 px-2 sm:px-4">
+                            <button className="px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base whitespace-nowrap">
                                 Become a Partner
                             </button>
-                            <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
+                            <button className="px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 text-sm md:text-base whitespace-nowrap">
                                 Join as a Rider
                             </button>
                         </div>
-                    </div>
-
-                    {/* Right Image */}
-                    <div className="relative">
-                        <div className="relative z-10">
-                            <img
-                                src={partnerHeroImg}
-                                alt="Healthcare professionals"
-                                className="w-full h-auto object-cover rounded-2xl shadow-2xl"
-                            />
-                        </div>
-                        {/* Image backdrop effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl transform translate-x-4 translate-y-4"></div>
                     </div>
                 </div>
             </div>
