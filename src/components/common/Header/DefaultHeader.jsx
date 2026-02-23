@@ -76,8 +76,8 @@ const DefaultHeader = () => {
                                     to={item.path}
                                     onClick={handleLinkClick}
                                     className={`text-md font-medium transition-all duration-300 hover:scale-105 relative group ${isActive
-                                            ? "text-pink-600"
-                                            : "text-gray-700 hover:text-pink-600"
+                                        ? "text-pink-600"
+                                        : "text-gray-700 hover:text-pink-600"
                                         }`}
                                 >
                                     {item.name}
@@ -90,9 +90,12 @@ const DefaultHeader = () => {
                     </nav>
 
                     <div className="hidden md:flex items-center">
-                        <button className="px-7 py-3 rounded-full text-md font-medium transition-all duration-300 hover:scale-105 bg-gradient-to-r from-pink-500/60 to-[#CB2B7DB2]/60 text-white shadow-lg">
+                        <Link
+                            to="/signin"
+                            className="px-7 py-3 rounded-full text-md font-medium transition-all duration-300 hover:scale-105 bg-gradient-to-r from-pink-500/60 to-[#CB2B7DB2]/60 text-white shadow-lg"
+                        >
                             Sign In
-                        </button>
+                        </Link>
                     </div>
 
                     <button
@@ -147,9 +150,13 @@ const DefaultHeader = () => {
                                 Return Medicine
                             </button>
 
-                            <button className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 border-2 border-gray-300 text-gray-700 bg-white">
+                            <Link
+                                to="/signin"
+                                onClick={handleLinkClick}
+                                className="py-4 px-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 border-2 border-gray-300 text-gray-700 bg-white text-center"
+                            >
                                 Sign In
-                            </button>
+                            </Link>
                         </div>
                     </nav>
                 </div>

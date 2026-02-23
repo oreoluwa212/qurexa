@@ -2,6 +2,7 @@ import logo from '../assets/images/logo.png';
 import heroBackground from "../assets/images/hero-background.png";
 import deliveryHeroImg from '../assets/images/delivery-hero-img.png';
 import partnerHeroImg from '../assets/images/partner-hero-image.png';
+import authBg from '../assets/images/auth-bg.svg';
 
 import sameDayIcon from '../assets/icons/same-day-delivery.svg';
 import nhsIcon from '../assets/icons/nhs-complaint.svg';
@@ -22,6 +23,7 @@ import webPortalIcon from '../assets/icons/web-portal.svg';
 import csvUploadIcon from '../assets/icons/csv-upload.svg';
 import apiAccessIcon from '../assets/icons/api-access.svg';
 import scheduledPickupsIcon from '../assets/icons/scheduled-pickups.svg';
+
 
 export {
     logo,
@@ -46,5 +48,6 @@ export {
     webPortalIcon,
     csvUploadIcon,
     apiAccessIcon,
-    scheduledPickupsIcon
+    scheduledPickupsIcon,
+    authBg
 };

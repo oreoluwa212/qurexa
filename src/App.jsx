@@ -12,6 +12,8 @@ import PartnerLayout from "./components/layout/PartnerLayout";
 import PrescriptionPage from "./pages/static_external_pages/PrescriptionPage";
 import GroceryPage from "./pages/static_external_pages/GroceryPage";
 import PartnerWithUsPage from "./pages/static_external_pages/PartnerWithUsPage";
+import SignUpPage from "./pages/auth/SignUpPage";
+import SignInPage from "./pages/auth/SignInPage";
 import useScrollProgress from "./hooks/useScrollProgress";
 
 const App = () => {
@@ -60,6 +62,10 @@ const App = () => {
           />
 
           <Route path="/blog" element={<BlogPage />} />
+
+          {/* Authentication Routes */}
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/signin" element={<SignInPage />} />
         </Routes>
       </div>
     </Router>
